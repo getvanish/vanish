@@ -1,0 +1,41 @@
+{
+  "name": "vanish",
+  "version": "0.1.0",
+  "description": "Decentralized Git repository storage on Solana",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "cli": "npm run start --workspace=@vanish/cli --",
+    "web:dev": "npm run dev --workspace=@vanish/web",
+    "test": "npm test --workspaces --if-present",
+    "lint": "eslint 'packages/*/src/**/*.{ts,tsx}' --max-warnings 0",
+    "lint:fix": "eslint 'packages/*/src/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write 'packages/*/src/**/*.{ts,tsx}'",
+    "format:check": "prettier --check 'packages/*/src/**/*.{ts,tsx}'",
+    "type-check": "npm run type-check --workspaces --if-present"
+  },
+  "keywords": [
+    "solana",
+    "git",
+    "decentralized",
+    "blockchain",
+    "version-control"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.2.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

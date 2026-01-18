@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #111;
+  --background: #fff;
+  --muted: #666;
+  --border: #eee;
+  --accent: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+/* Code block */
+.code-block {
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, monospace;
+  font-size: 14px;
+  backdrop-filter: blur(8px);
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+code {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, monospace;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Nav links with underline hover */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+.btn-primary:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #000;
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: #000;
+}
+
+/* Wallet adapter override for light theme */
+.wallet-adapter-button {
+  background: #000 !important;
+  border-radius: 8px !important;
+  font-family: inherit !important;
+  font-weight: 500 !important;
+}
+
+.wallet-adapter-button:hover {
+  background: #333 !important;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@vanish/cli",
+  "version": "0.1.0",
+  "description": "Vanish command-line interface",
+  "main": "dist/index.js",
+  "bin": {
+    "vanish": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "@vanish/sdk": "*",
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "inquirer": "^8.2.6",
+    "conf": "^10.2.0",
+    "bs58": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.6",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}
