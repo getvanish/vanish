@@ -38,6 +38,14 @@ export default function RootLayout({
               >
                 GitHub
               </a>
+              <a
+                href="https://x.com/getvanishxyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link text-sm text-white/70 hover:text-white transition-colors"
+              >
+                X
+              </a>
             </div>
           </div>
         </nav>

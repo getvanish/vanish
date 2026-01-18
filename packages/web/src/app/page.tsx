@@ -104,6 +104,14 @@ vanish push`
             >
               GitHub
             </a>
+            <a
+              href="https://x.com/getvanishxyz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              X
+            </a>
           </div>
         </div>
       </footer>
